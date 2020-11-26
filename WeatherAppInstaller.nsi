@@ -12,7 +12,7 @@
 !define NAME "WeatherApp" 
 Name "WeatherApp" 
 OutFile "WeatherAppInstall.exe"
-!define MUI_ICON "D:\Informatique\DEC shawi\Session_5\Dev-Speciaux\Laboratoires\TP4b-WeatherStation\weatherApp.ico"
+!define MUI_ICON "weatherApp.ico"   ;"D:\Informatique\DEC shawi\Session_5\Dev-Speciaux\Laboratoires\TP4b-WeatherStation\weatherApp.ico"
 Unicode True
 
 ;Default installation folder
@@ -32,7 +32,7 @@ RequestExecutionLevel user
 ;--------------------------------
 ;Pages
 
-!insertmacro MUI_PAGE_LICENSE "D:\Informatique\DEC shawi\Session_5\Dev-Speciaux\Laboratoires\TP4b-WeatherStation\License.txt"
+!insertmacro MUI_PAGE_LICENSE "License.txt"  ;"D:\Informatique\DEC shawi\Session_5\Dev-Speciaux\Laboratoires\TP4b-WeatherStation\License.txt"
 !insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
@@ -52,7 +52,7 @@ Section "WeatherApp" SecWeatherApp
 
 SetOutPath "$INSTDIR"
 
-File /r "D:\Informatique\DEC shawi\Session_5\Dev-Speciaux\Laboratoires\TP4b-WeatherStation\installFile\*.*"
+File /r "installFile\*.*"  ;"D:\Informatique\DEC shawi\Session_5\Dev-Speciaux\Laboratoires\TP4b-WeatherStation\installFile\*.*"
 
 WriteRegStr HKCU "Software\WeatherApp" "" $INSTDIR
 
